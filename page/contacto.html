@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Stilos/form_res.css">
+    <link rel="stylesheet" href="/Stilos/estilos.css">
+    <link rel="stylesheet" href="/Stilos/buscador.css">
+   
+   
+</head>
+
+<body>
+   <!--navegador-->
+ <nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+  </label>
+  <a href="index.html" class="enlace">
+      <img src="/IMG/logo.png" alt="" class="logo">
+  </a>
+    <!--buscador -->
+    <div class="buscador">
+      <form id="demo-b">
+        <h1></h1>
+        <input type="search" placeholder="Buscar">
+      </form>
+    </div>
+      <!--------------->
+  <ul class="Boton_ONE">
+      <li><a class="active" href="/index.html">Inicio</a></li>
+      <li><a href="/page/productos.html">Productos</a></li>
+      <li><a href="/page/historia.html">Historia</a></li>
+      <li><a href="/page/despacho.html">Despacho</a></li>
+      <li><a href="/page/contacto.html">Contacto</a></li>
+  </ul>
+
+</nav>
+  <!----------formulario--------------->
+
+  <div class="container">  
+    <form id="contact" action="" method="post">
+      <h3>contáctanos</h3>
+      <h4>llena este pequeño formulario te responderemos en un plazo de 24Hrs!</h4>
+      <fieldset>
+        <input placeholder="Nombre" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Correo electronico" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Celular" type="tel" tabindex="3" required>
+      </fieldset>
+      <fieldset>
+        <select name="pais">
+          <option value="Elegir" id="CH">Elegir opción de País</option>
+          <option value="Chile" id="CH">Chile</option>
+          <option value="Argentina" id="AR">Argentina</option>
+          <option value="Brasil" id="BR">Brasil</option>
+          <option value="Colombia" id="CL">Colombia</option>
+          <option value="Venezuela" id="VE">Venezuela</option>
+          <option value="Peru" id="PE">Peru</option>
+          <option value="Ecuador" id="EC">Ecuador</option>
+      </select>
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Escribe tu mesaje con gusto te responderemos...." tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+      <div class="box_img"></div>
+    </form>
+  </div>
+
+<!--Footer- pie de mi pagina,(redes sociales y copyright)-->
+<section></section>
+
+		<footer class="footer-distributed">
+
+			<div class="footer-right">
+        
+				<a href="https://www.facebook.com"><img src="/IMG/facebook_pe.png"><i></i></a>
+				<a href="https://twitter.com/?lang=es"><img src="/IMG/gorjeo_pe.png"><i></i></a>
+				<a href="https://www.linkedin.com"><img src="/IMG/linkedin_pe.png"><i></i></a>
+				
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+          
+					<a href="/index.html">Inicio</a>
+
+					<a href="/page/productos.html">Productos</a>
+
+					<a href="/page/historia.html">Historia</a>
+
+					<a href="/page/despacho.html">Despacho</a>
+
+					<a href="/page/contacto.html">Contacto</a>
+				</p>
+
+				<p>Company Name &copy; 2022</p>
+			</div>
+
+		</footer>
+</body>
+</html>
