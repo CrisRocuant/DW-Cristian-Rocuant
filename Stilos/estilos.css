@@ -86,72 +86,122 @@ section{
     background-position: center center;
     height: calc(100vh - 80px);
 }
+/*-----probando Flex-----*/
+.box-card{
+  
+    
+    justify-content:center;
+    display: flex;
+    flex-flow: row wrap;
 
-
-
+  
+    
+}
 
 /* Caja producto */
-.card__precio {
-    color:rgb(255, 255, 255);
-    font-size: 32px;
-    background-color: #000000;
-    border: 1px solid #90909057;
-    padding: 0 1rem;
-    margin: 1rem;
+.card{
     
-
-}
-/*-----probando Flex-----*/
-.box-card {
-    margin: 15px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: stretch;
- 
-
-
-}
-/*-----------------------------productos Card------------*/
-.card {
-    border: 4px solid #00000034;
-    background: #ffffff92;
-    height: 640px;
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-    display: inline-block;
+    z-index: 1;
+    position: relative;
+    
+    margin: 3%;
+    width: 350px;
+    /*--height 190Px_*/
+    height: 320px;
+    background: #fff;
     border-radius: 20px;
-    
-    
+    box-shadow: 0 35px 80px rgb(0,0,0,0.15);
+    transition: 0.2s;
+    background: linear-gradient(45deg, #ffc5f2, #ffeec4);
 }
+.card:hover{
+    height: 458px;
+}
+.imgBx{
+    position: relative;
+    left: 23%;
+    margin: -10px;
 
-.card__image {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgb(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+.card:hover .imgBx{
+    width: 250px;
+    height: 250px;
+
+}
+.imgBx img{
+    position: absolute;
+   
     width: 100%;
-    margin: 20px;
-    margin-left: 2%;
-    margin-right: 2%;
+    height: 100%;
+    object-fit: cover;
 }
-
-.card__price {
-    color:rgb(0, 0, 0);
-    font-family: Roboto;
-    
-  
-
-}
-
-.card__description {
-    font-family: Roboto;
-
-}
-
-.btn {
-    padding: 3%;
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
     
 }
+.card .content .details{
+    padding: 50px;
+   
+    width: 100%;
+    transition: 0.5s
+
+}
+.card .content .details h2{
+    padding: 30px;
+    text-align: center;
+    font-size:  1.25em;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.2em;
+
+}
+
+
+
+
+
+
+.card .content .details h2 span {
+    
+    font-size:  0.85em;
+    font-weight: 600;
+    opacity: 0,5;
+
+}
+.card .content .details {
+    display: flex; 
+   
+    margin: 10px 0;
+
+}
+.TitleProducto{
+   
+    position: absolute;
+    top: 3%;
+    left: 30%;   
+}
+.btn_01{
+    position: absolute;
+    top: 80%;
+    left: 20%; 
+
+}
+
+.btn_01:hover {
+    opacity: .5;
+}
+
 
 /* foter pie de pagina */
 
@@ -407,6 +457,7 @@ section{
         text-align: center;
     }
     .showcase {
+        z-index: 9;
         color: white;
         width: 100%;
         height: 550px;
@@ -418,23 +469,8 @@ section{
         align-items: center;
         justify-content: flex-end;
     }
-    .btn_01 {
-        cursor: pointer;
-        display: inline-block;
-        border: 0;
-        font-weight: bold;
-        padding: 10px 20px;
-        background: #2e2d2d;
-        color: #ffffff;
-        font-size: 15px;
-        border: 1px solid #ffffff;
-        margin: 10px 0;
-    }
-    .btnbtn_01:hover {
-        opacity: .5;
-    }
-    .showcase h2.
-    .showcase p {
+  
+    .showcase h2. .showcase p {
         margin-bottom: 10px;
     }
 
@@ -545,6 +581,7 @@ body {
         "a";
      }
      nav .checkbox .check .checkbtn {
+        z-index: 9;
         display: flex;
         flex-direction:column;
     
@@ -613,18 +650,22 @@ body {
         transition: all .5s;
     }
     nav ul li{
+       
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
     nav ul li a{
+       
         font-size: 20px;
     }
     li a:hover, li a.active{
+        
         background: none;
         color: rgb(0, 255, 204);
     }
     #check:checked ~ ul{
+        z-index: 9;
         left:0;
     }
 }
@@ -743,4 +784,201 @@ body {
 	text-decoration: none;
 	color: white;
 	font-size: 1.5rem;
+}
+
+/*----buscador----*/
+
+  
+input {
+    outline: none;
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none; /* quitar el icono de buscar y cancelar */
+}
+
+/* search input field */
+input[type=search] {
+    background: #ededed url(http://webdesignerwall.com/demo/expandable-search-form/images/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+input[type=search]:focus {
+    width: 130px;
+    background-color: #fff;
+    border-color: #6dcff6;
+    
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+/* placeholder */
+input:-moz-placeholder {
+    color: #999;
+}
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+/* demo B */
+#demo-b input[type=search] {
+    width: 15px;
+    padding-left: 10px;
+    color: transparent;
+    cursor: pointer;
+}
+#demo-b input[type=search]:hover {
+    background-color: #fff;
+}
+#demo-b input[type=search]:focus {
+    width: 130px;
+    padding-left: 32px;
+    color: #000;
+    background-color: #fff;
+    cursor: auto;
+}
+#demo-b input:-moz-placeholder {
+    color: transparent;
+}
+#demo-b input::-webkit-input-placeholder {
+    color: transparent;
+}
+.buscador {
+  float: right;
+  margin: 20px;
+}
+
+/*------formulario -----*/
+
+ 
+.contain01 {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+
+   /*---------fonts:Roboto Mono-----------*/
+
+
+
+.container {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+}
+/*---------Titulo Centrado--------*/
+#contact h3 {
+    text-align:center;
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+    text-align:center;
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+#select pais{
+    text-decoration-color: white;
+    border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:rgb(0, 0, 0);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:rgb(204, 0, 0);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
 }
